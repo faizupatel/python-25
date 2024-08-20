@@ -1,0 +1,38 @@
+import tkinter as tk
+import random
+import string
+
+def generate_password():
+    password_length = int(entry.get())
+    password = ''.join(random.choices(string.ascii_letters + string.digits + string.punctuation, k=password_length))
+    result_label.config(text="Your Password- " + password)
+
+# Create the main window
+root = tk.Tk()
+root.title("Password Generator -studymuch.in")
+
+# Set the window dimensions (width x height)
+window_width = 400
+window_height = 200
+root.geometry(f"{window_width}x{window_height}")
+font = ("Helvetica", 16)
+
+# Label
+label = tk.Label(root, text="Enter Password Length:", font=font)
+label.pack()
+
+# Entry field for password length
+entry = tk.Entry(root, font=font)
+entry.pack()
+
+# Generate Password button
+generate_button = tk.Button(root, text="Generate Password", command=generate_password, font=font)
+generate_button.pack()
+
+# Label to display the generated password
+result_label = tk.Label(root, text="", font=font)
+result_label.pack()
+# Start the GUI main loop
+root.mainloop()
+
+
