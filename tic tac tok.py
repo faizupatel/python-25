@@ -1,14 +1,3 @@
-#-------------------------------------------------------------------------------
-# Name:        module2
-# Purpose:
-#
-# Author:      Faizan
-#
-# Created:     13/06/2024
-# Copyright:   (c) Faizan 2024
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-
 def print_board(board):
     for row in board:
         print(" | ".join(row))
